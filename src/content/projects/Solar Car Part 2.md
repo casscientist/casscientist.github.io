@@ -11,10 +11,10 @@ draft: false
 ---
 <blockquote style="quotes: none; margin-left: 20px; color: #555;">
   <p>Part 2 of 2 in the Solar Car Series</p>
-  <p>In <a href="/solar-car-part-1">Solar Car: Designing and Building a Custom Vehicle</a>, I covered my first three years on the team across several subteams, culminating in our failure to qualify at the track. This page covers my senior year, when I led the Brakes & Steering subteam to redesign the vehicle's mechanical systems and prepare it for another attempt.</p>
+  <p>In <a href="/projects/solar-car-part-1">Solar Car: Designing and Building a Custom Vehicle</a>, I covered my first three years on the team across several subteams, culminating in our failure to qualify at the track. This page covers my senior year, when I led the Brakes & Steering subteam to redesign the vehicle's mechanical systems and prepare it for another attempt.</p>
 </blockquote>
 
-In my final year on the [Solar Car team](www.solarcaratuva.com), I took on a leadership role as the Brakes & Steering Lead. Having narrowly failed to qualify at the track the previous year, I was motivated to address the root causes of our mechanical issues. Over the course of the year, I led a team composed mostly of first-year students to redesign the steering and braking systems while mentoring them through CAD, FEA, and hands-on manufacturing.
+In my final year on the [Solar Car team](https://www.solarcaratuva.com), I took on a leadership role as the Brakes & Steering Lead. Having narrowly failed to qualify at the track the previous year, I was motivated to address the root causes of our mechanical issues. Over the course of the year, I led a team composed mostly of first-year students to redesign the steering and braking systems while mentoring them through CAD, FEA, and hands-on manufacturing.
 
 We rebuilt much of the vehicle's mechanical systems around improved driver ergonomics, steering stability, serviceability, and reliability. This included a telescoping hexagonal steering shaft, redesigned brake plumbing and pedal assemblies, and a custom linear ratchet-and-pawl handbrake. At our end-of-year track event, the rebuilt vehicle passed the dynamic steering and braking tests and demonstrated substantially greater stability under hard braking and cornering.
 

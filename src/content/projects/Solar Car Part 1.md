@@ -12,10 +12,10 @@ draft: false
 ---
 <blockquote style="quotes: none; margin-left: 20px; color: #555;">
   <p>Part 1 of 2 in the Solar Car Series</p>
-  <p>This page covers my first three years on the team—from embedded telemetry and composites to an emergency 5-week sprint to rebuild our steering and braking. For my senior year leading the Brakes & Steering subteam, see <a href="/solar-car-part-2">Solar Car: Rebuild</a>.</p>
+  <p>This page covers my first three years on the team—from embedded telemetry and composites to an emergency 5-week sprint to rebuild our steering and braking. For my senior year leading the Brakes & Steering subteam, see <a href="/projects/solar-car-part-2">Solar Car: Rebuild</a>.</p>
 </blockquote>
 
-The [Solar Car team](www.solarcaratuva.com) was one of the defining experiences of my college career. As an entirely student-run organization, we designed, manufactured, and built a solar-powered electric vehicle from scratch to compete in the Formula Sun Grand Prix (FSGP)—an intense multi-day track endurance race.
+The [Solar Car team](https://www.solarcaratuva.com) was one of the defining experiences of my college career. As an entirely student-run organization, we designed, manufactured, and built a solar-powered electric vehicle from scratch to compete in the Formula Sun Grand Prix (FSGP)—an intense multi-day track endurance race.
 
 Over my first three years, I contributed across embedded systems, composite manufacturing, and mechanical design, ultimately taking primary responsibility for rebuilding much of the vehicle's steering and braking systems during a 5-week push to get the car onto the track. My senior year, I became the Brakes & Steering Subteam Lead and led a broader redesign of the vehicle's handling and dynamics, which you can read about in Part 2.
 
@@ -218,5 +218,5 @@ The vehicle successfully passed nearly all the dynamic braking and steering test
 
 In the past, scrutineering could be done throughout the event, meaning we could normally still continue to qualify. Therefore, that evening I calculated the amount of weight shift required and designed a weld-on ballast box to balance the vehicle. However, we soon found out that we were not allowed to continue to attempt qualification due to reservation conflicts with the track, so our race was over.
 
-While very disappointing, the experience proved what our team could achieve under extreme time pressure. It provided invaluable lessons in designing for manufacturability and assembly, in the importance of rigorous testing and conservative timeline planning, and provided a strong motivator to come back stronger next year, where I would be taking a [lead role to completely redesign the handling around the issues we faced](/solar-car-part-2).
+While very disappointing, the experience proved what our team could achieve under extreme time pressure. It provided invaluable lessons in designing for manufacturability and assembly, in the importance of rigorous testing and conservative timeline planning, and provided a strong motivator to come back stronger next year, where I would be taking a [lead role to completely redesign the handling around the issues we faced](/projects/solar-car-part-2).
 

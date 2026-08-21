@@ -117,14 +117,14 @@ I oversaw a complete redesign of our steering assembly to reduce mechanical play
       class="w-full max-w-4xl h-auto rounded-lg border border-line object-cover !m-0" 
     />
   </div>
-  <figcaption class="mt-2 text-sm text-ink-soft">Final telescoping steering shaft assembly integrated into the vehicle.</figcaption>
+  <figcaption class="mt-2 text-sm text-ink-soft">The telescoping steering shaft assembly integrated into the vehicle.</figcaption>
 </figure>
 
 ### Steering Linkages
-* **Steering Arms:** The previous 1/8" sheet metal arms flexed noticeably under load. We welded structural gussets onto the arms to improve stiffness
+* **Steering Arms:** The previous 1/8" sheet metal arms flexed noticeably under load. We welded structural gussets onto the arms to improve stiffness.
 * **A Design for Next Year:** I designed a new set of hollow steel uprights that were lighter and easier to attach components to, and steering arms that were longer for lower steering effort. Unfortunately, we ran out of time to manufacture the uprights, so I tapped threaded holes into the existing aluminum uprights to attach a simpler set of redesigned steering arms to. However, I was not confident that the threaded inserts provided sufficient strength, so we retained the existing steering arm configuration rather than relying on them for the final design.
-* **Clearance Issues:** Machined precise aluminum spacers for the rack-and-pinion and brake rotors to eliminate contact points against the steering rack boot and on the wheel hubs.
-* **Steering Stops:** Designed physical chassis stops to limit rack travel before tires could contact the inner aerobody walls.
+* **Clearance Issues:** Machined precise aluminum spacers for the rack-and-pinion and brake rotors to eliminate contact points on the steering rack boot and the wheel hubs.
+* **Steering Stops:** Designed physical chassis stops to limit rack travel before tires could contact the lower control arms.
 
 <figure class="text-center">
     <div class="flex justify-center">

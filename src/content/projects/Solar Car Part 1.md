@@ -38,7 +38,7 @@ My entry to the team focused on embedded electronics and driver interfaces. Our 
 
 #### Key Contributions:
 * **Driver Heads-Up Display (HUD):** Modeled UI mockups inspired by modern automotive dashboards, then implemented the layout using React. I then fabricated a custom mounting bracket for the Raspberry Pi screen, and wrote Linux shell automation scripts to start and display the web server.
-* **CAN Bus Integration:** Wrote Python backend scripts to parse CAN frames, log system health, and push telemetry to the web display.
+* **CAN Bus Integration:** Wrote Python backend scripts to parse CAN frames, log status messages, and push telemetry to the web display.
 * **Hardware Debugging:** When our CAN-to-serial converter failed, I worked alongside a teammate to solder serial wires directly into the CAN controller board, writing extra scripts to parse raw hexadecimal data streams into a human-readable backend.
 * **Telemetry:** Configured an XBee LoRa module to stream live vehicle telemetry to the crew. 
 
@@ -77,7 +77,7 @@ My entry to the team focused on embedded electronics and driver interfaces. Our 
 
 ### Year 2: Aerobody Composites Development and Testing
 
-During my second year, I transitioned to the aerobody sub-team to gain hands-on experience with composite manufacturing techniques. 
+During my second year, I transitioned to the aerobody subteam to gain hands-on experience with composite manufacturing techniques. 
 
 * **Wet Layup Optimization:** Conducted wet layup trials testing different fibers (fiberglass vs carbon fiber), resin ratios, and vacuum bagging durations.
 * **Material Characterization:** Executed tensile and 3-point bending tests using an Instron universal testing machine to compare yield strength and stiffness across coupon samples.
@@ -118,7 +118,7 @@ Seeking more hardware experience related to my classes, I joined the Brakes & St
     <figcaption class="mt-2 text-sm text-ink-soft">CAD Model I made of our handbrake master cylinder</figcaption>
   </figure>
 
-I also worked on replacing our brake limit switch with an integrated potentiometer to allow adjustable braking thresholds.
+I also worked on replacing our existing brake limit switch with an integrated potentiometer to allow adjustable brake light activation thresholds.
 
 <figure class="text-center">
     <div class="flex justify-center">
@@ -218,5 +218,5 @@ The vehicle successfully passed nearly all the dynamic braking and steering test
 
 In the past, scrutineering could be done throughout the event, meaning we could normally still continue to qualify. Therefore, that evening I calculated the amount of weight shift required and designed a weld-on ballast box to balance the vehicle. However, we soon found out that we were not allowed to continue to attempt qualification due to reservation conflicts with the track, so our race was over.
 
-While very disappointing, the experience proved what our team could achieve under extreme time pressure. It provided invaluable lessons in designing for manufacturability and assembly, in the importance of rigorous testing and conservative timeline planning, and provided a strong motivator to come back stronger next year, where I would be taking a [lead role to completely redesign the handling around the issues we faced](/projects/solar-car-part-2).
+While very disappointing, the experience proved what our team could achieve under extreme time pressure. It provided invaluable lessons in designing for manufacturability and assembly, in the importance of rigorous testing and conservative timeline planning, and provided a strong motivation to come back stronger next year, where I would be taking a [lead role](/projects/solar-car-part-2) to completely redesign the handling around the issues we faced.
 

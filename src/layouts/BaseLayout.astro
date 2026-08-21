@@ -11,13 +11,13 @@ interface Props {
   image?: string;
 }
 
-const { title, description = SITE.description, image = '/og-image.png' } = Astro.props;
+const { title, image = '/og-image.png' } = Astro.props;
 ---
 
 <!doctype html>
 <html lang={SITE.locale}>
   <head>
-    <BaseHead title={title} description={description} image={image} />
+    <BaseHead title={title} image={image} />
   </head>
   <body id="top" class="bg-paper text-ink">
     <Header />

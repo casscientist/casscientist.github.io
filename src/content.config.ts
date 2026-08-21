@@ -6,15 +6,16 @@ import { z } from 'astro/zod';
 // Each file's `id` is derived from its filename, e.g. studio-os.md -> "studio-os",
 // which becomes the URL at /work/studio-os.
 const work = defineCollection({
-  loader: glob({ base: './src/content/work', pattern: '**/*.md' }),
+  loader: glob({ base: './src/content/projects', pattern: '**/*.md' }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
       summary: z.string().max(160),
       role: z.string(),
-      date: z.coerce.date(),
-      tags: z.array(z.string()).default([]),
-      cover: image().optional(),
+      dateText: z.string(),
+      order: z.number().default(99),
+      tags: z.array(z.string()).default([]).optional(),
+      coverImage: z.string().optional(),
       url: z.url().optional(),
       repo: z.url().optional(),
       featured: z.boolean().default(false),

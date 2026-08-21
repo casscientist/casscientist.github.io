@@ -7,46 +7,72 @@ import SectionHeading from '@/components/SectionHeading.astro';
 import { SITE } from '@/site.config';
 
 const allWork = await getCollection('work', ({ data }) => !data.draft);
-const sorted = [...allWork].sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const sorted = [...allWork].sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99));
 const featured = sorted.filter((entry) => entry.data.featured);
-const rest = sorted.filter((entry) => !entry.data.featured);
-const selected = [...featured, ...rest].slice(0, 5);
+const personal = sorted.filter((entry) => !entry.data.featured);
 ---
 
 <BaseLayout title={SITE.name}>
-  <section class="mx-auto max-w-3xl px-6 pt-16 pb-20 sm:pt-24">
-    <p class="text-ink-soft mb-6 inline-flex items-center gap-2 font-mono text-xs">
-      <span class="bg-signal h-1.5 w-1.5 rounded-full" aria-hidden="true"></span>
-      {SITE.status}
-    </p>
+  <section class="mx-auto max-w-4xl px-6 pt-16 pb-20 sm:pt-24">
+    <!-- Asymmetric 12-Column Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
+      
+      <!-- Left Side: Large Portrait (5 out of 12 columns) -->
+      <div class="md:col-span-5 w-full max-w-sm mx-auto md:max-w-full">
+        <div class="aspect-[4/5] w-full rounded-3xl overflow-hidden border border-line shadow-sm bg-muted">
+          <img 
+            src="/images/main-photo.jpg" 
+            alt="Professional Portrait" 
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
 
-    <h1 class="font-display text-ink max-w-2xl text-4xl leading-[1.1] font-medium sm:text-5xl">
-      {SITE.tagline}
-    </h1>
+      <!-- Right Side: Text Stack (7 out of 12 columns) -->
+      <div class="md:col-span-7 flex flex-col justify-center">
+        
+        <!-- <p class="text-ink-soft mb-4 inline-flex items-center gap-2 font-mono text-xs">
+          <span class="bg-signal h-1.5 w-1.5 rounded-full" aria-hidden="true"></span>
+          {SITE.status}
+        </p> -->
 
-    <p class="text-ink-soft mt-6 max-w-md">
-      {SITE.role} — based on the work below, not a list of buzzwords.
-    </p>
+        <h1 class="font-display text-ink text-4xl leading-[1.1] font-medium sm:text-5xl">
+          {SITE.tagline}
+        </h1>
 
-    <div class="mt-8 flex flex-wrap items-center gap-3">
-      <Button href="/work" variant="solid">View the work →</Button>
-      <Button href="#contact" variant="ghost">Say hello</Button>
+        <p class="text-ink-soft mt-6 text-base leading-relaxed">
+          I design, analyze, and build hardware because I like working on projects 
+          where I can take a system from a blank CAD screen all the way through 
+          physical fabrication and testing. 
+        </p>
+        <p class="text-ink-soft mt-6 text-base leading-relaxed">
+          This portfolio documents my work across university teams, internships, and independent builds, including CAD models, FEA data, 
+          and testing videos.
+        </p>
+
+        <!-- Buttons -->
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <Button href="/projects" variant="solid">See My Projects →</Button>
+          <Button href="documents/resume.pdf" variant="ghost">Download My Resume</Button>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <section id="work" class="mx-auto max-w-3xl px-6 pb-20">
-    <SectionHeading eyebrow="Selected work" count={allWork.length} />
+  <section id="projects" class="mx-auto max-w-3xl px-6 pb-20">
+    <SectionHeading eyebrow="Featured Projects"/>
     <div>
-      {selected.map((entry) => <WorkRow entry={entry} />)}
+      {featured.map((entry) => <WorkRow entry={entry} />)}
     </div>
     {
-      allWork.length > selected.length && (
+      allWork.length > featured.length && (
         <div class="mt-6">
           <a
-            href="/work"
+            href="/projects"
             class="text-ink-soft hover:text-signal font-mono text-xs transition-colors"
           >
-            View all {allWork.length} projects →
+            View all projects →
           </a>
         </div>
       )
@@ -55,24 +81,50 @@ const selected = [...featured, ...rest].slice(0, 5);
 
   <section id="about" class="mx-auto max-w-3xl px-6 pb-20">
     <SectionHeading eyebrow="About" />
-    <p class="text-ink-soft max-w-xl">
-      {SITE.description}
-    </p>
-    <a href="/about" class="text-signal mt-4 inline-block font-mono text-xs hover:underline">
-      More about how I work →
-    </a>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center mt-8">
+      <!-- Photo Column (Takes up 5 out of 12 columns on desktop) -->
+  <div class="md:col-span-5">
+    <div class="aspect-[4/5] w-full rounded-xl overflow-hidden bg-muted border border-line shadow-md">
+      <img 
+        src="/images/about-section-photo.webp" 
+        alt="Backpacking and mountaineering" 
+        class="w-full h-full object-cover grayscale contrast-125 hover:contrast-100 hover:grayscale-0 transition-all duration-500"
+      />
+    </div>
+    <p class="mt-2 font-mono text-xs text-muted-foreground tracking-tight text-center">
+       ▲ Near Sherman Crater during summit climb of Mt. Baker, WA.
+      </p>
+  </div>
+  <!-- Text Column (Takes up 7 out of 12 columns on desktop) -->
+    <div class="md:col-span-7 space-y-4 text-ink-soft">
+    <p> I graduated from the University of Virginia with a Bachelor's in Mechanical Engineering. </p>
+    <p>I am an Eagle Scout who loves the outdoors, especially backpacking, scrambling, and skiing, as well as playing tennis. </p>
+    <p>I also play the flute, both classically and in the UVA Jazz Big Band, where I was a frequent soloist. </p>
+    </div>
+  </div>
   </section>
-
+  
   <section id="contact" class="mx-auto max-w-3xl px-6 pb-24">
-    <SectionHeading eyebrow="Let's talk" />
-    <p class="font-display text-ink max-w-lg text-2xl sm:text-3xl">
-      Have something worth building?
+  <!-- Section Label -->
+  <SectionHeading eyebrow="Contact Me" />
+  
+  <!-- Main Prompt -->
+  <p class="text-ink max-w-lg text-2xl sm:text-3xl font-sans mb-12">
+      Let's connect:
     </p>
-    <a
-      href={`mailto:${SITE.email}`}
-      class="text-signal mt-4 inline-flex items-center gap-2 font-mono hover:underline"
-    >
-      {SITE.email}
+  <!-- Interactive Grid Container -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
+    <!-- Email Card -->
+    <a href={`mailto:${SITE.email}`} class="group flex flex-col p-4 bg-muted hover:bg-surface border border-line rounded-lg transition">
+      <span class="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-1">Email Me</span>
+      <span class="text-ink font-medium group-hover:text-signal transition">{SITE.email}</span>
     </a>
-  </section>
+
+    <!-- LinkedIn Card -->
+    <a href={SITE.social[1].href} target="_blank" class="group flex flex-col p-4 bg-muted hover:bg-surface border border-line rounded-lg transition">
+      <span class="text-xs font-mono uppercase tracking-wider text-muted-foreground mb-1">Connect on LinkedIn</span>
+      <span class="text-ink font-medium group-hover:text-signal transition">LinkedIn Profile →</span>
+    </a>
+  </div>
+</section>
 </BaseLayout>

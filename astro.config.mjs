@@ -7,7 +7,7 @@ import mdx from '@astrojs/mdx';
 
 // Replace with your production URL after deploying to Vercel / Netlify.
 // It powers the sitemap and the canonical / Open Graph URLs in BaseLayout.
-const SITE_URL = 'https://casscientist.github.io';
+const SITE_URL = 'https://www.coleaustinsmith.com';
 
 export default defineConfig({
   site: SITE_URL,

@@ -19,7 +19,7 @@ The [Solar Car team](https://www.solarcaratuva.com) was one of the defining expe
 
 Over my first three years, I contributed across embedded systems, composite manufacturing, and mechanical design, ultimately taking primary responsibility for rebuilding much of the vehicle's steering and braking systems during a 5-week push to get the car onto the track. My senior year, I became the Brakes & Steering Subteam Lead and led a broader redesign of the vehicle's handling and dynamics, which you can read about in Part 2.
 
-If you're most interested in my hands-on mechanical work, skip ahead to [Year 3: A Sprint to the Racetrack](#year-3-a-sprint-to-the-racetrack).
+If you're most interested in my hands-on mechanical work, skip ahead to [Year 3: A Sprint to the Racetrack](#year3).
 
 <figure class="my-8 text-center">
   <div class="my-8 flex justify-center">
@@ -93,8 +93,11 @@ During my second year, I transitioned to the aerobody subteam to gain hands-on e
     <figcaption class="mt-2 text-sm text-ink-soft">Testing fiberglass wet layups for the aeroshell</figcaption>
   </figure>
 
+<div id= "year3" class="scroll-mt-20">
+
 ### Year 3: A Sprint to the Racetrack
 
+</div>
 Seeking more hardware experience related to my classes, I joined the Brakes & Steering subteam. I started by creating CAD models of existing components, and repurposed an old brake pedal to use for this year. 
 
   <figure class="text-center">

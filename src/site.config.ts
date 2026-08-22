@@ -4,7 +4,7 @@ export const SITE = {
   name: 'Cole Smith',
   role: 'Mechanical Engineer',
   email: 'cole@coleaustinsmith.com',
-  tagline: 'Mechanical Engineering Graduate',
+  tagline: "Hi, I'm Cole",
   status: 'Actively looking for full-time hardware engineering roles',
   social: [
     { label: 'GitHub', href: 'https://github.com/casscientist' },
